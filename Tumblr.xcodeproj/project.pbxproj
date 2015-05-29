@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F87B96E1B18EA75000025BA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F87B96D1B18EA75000025BA /* TabBarViewController.swift */; };
 		BBC7E7081B181A15006BA7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC7E7071B181A15006BA7C5 /* AppDelegate.swift */; };
 		BBC7E70A1B181A15006BA7C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC7E7091B181A15006BA7C5 /* ViewController.swift */; };
 		BBC7E70D1B181A15006BA7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC7E70B1B181A15006BA7C5 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F87B96D1B18EA75000025BA /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		BBC7E7021B181A15006BA7C5 /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC7E7061B181A15006BA7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBC7E7071B181A15006BA7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				BBC7E7311B183794006BA7C5 /* TrendingViewController.swift */,
 				BBC7E72D1B1834C9006BA7C5 /* ComposeViewController.swift */,
 				BBC7E72B1B18346E006BA7C5 /* SearchViewController.swift */,
+				1F87B96D1B18EA75000025BA /* TabBarViewController.swift */,
 				BBC7E7291B1820CF006BA7C5 /* HomeViewController.swift */,
 				BBC7E70E1B181A15006BA7C5 /* Images.xcassets */,
 				BBC7E7101B181A15006BA7C5 /* LaunchScreen.xib */,
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F87B96E1B18EA75000025BA /* TabBarViewController.swift in Sources */,
 				BBC7E7321B183794006BA7C5 /* TrendingViewController.swift in Sources */,
 				BBC7E72E1B1834C9006BA7C5 /* ComposeViewController.swift in Sources */,
 				BBC7E70A1B181A15006BA7C5 /* ViewController.swift in Sources */,
@@ -431,6 +435,7 @@
 				BBC7E7231B181A15006BA7C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBC7E7241B181A15006BA7C5 /* Build configuration list for PBXNativeTarget "TumblrTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +444,7 @@
 				BBC7E7261B181A15006BA7C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
