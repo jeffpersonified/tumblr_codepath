@@ -13,6 +13,11 @@
 		BBC7E70F1B181A15006BA7C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC7E70E1B181A15006BA7C5 /* Images.xcassets */; };
 		BBC7E7121B181A15006BA7C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC7E7101B181A15006BA7C5 /* LaunchScreen.xib */; };
 		BBC7E71E1B181A15006BA7C5 /* TumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC7E71D1B181A15006BA7C5 /* TumblrTests.swift */; };
+		BBC7E72A1B1820CF006BA7C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC7E7291B1820CF006BA7C5 /* HomeViewController.swift */; };
+		BBC7E72C1B18346E006BA7C5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC7E72B1B18346E006BA7C5 /* SearchViewController.swift */; };
+		BBC7E72E1B1834C9006BA7C5 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC7E72D1B1834C9006BA7C5 /* ComposeViewController.swift */; };
+		BBC7E7301B18378A006BA7C5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC7E72F1B18378A006BA7C5 /* AccountViewController.swift */; };
+		BBC7E7321B183794006BA7C5 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC7E7311B183794006BA7C5 /* TrendingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		BBC7E7171B181A15006BA7C5 /* TumblrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumblrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC7E71C1B181A15006BA7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBC7E71D1B181A15006BA7C5 /* TumblrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrTests.swift; sourceTree = "<group>"; };
+		BBC7E7291B1820CF006BA7C5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BBC7E72B1B18346E006BA7C5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BBC7E72D1B1834C9006BA7C5 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		BBC7E72F1B18378A006BA7C5 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		BBC7E7311B183794006BA7C5 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,11 @@
 				BBC7E7071B181A15006BA7C5 /* AppDelegate.swift */,
 				BBC7E7091B181A15006BA7C5 /* ViewController.swift */,
 				BBC7E70B1B181A15006BA7C5 /* Main.storyboard */,
+				BBC7E72F1B18378A006BA7C5 /* AccountViewController.swift */,
+				BBC7E7311B183794006BA7C5 /* TrendingViewController.swift */,
+				BBC7E72D1B1834C9006BA7C5 /* ComposeViewController.swift */,
+				BBC7E72B1B18346E006BA7C5 /* SearchViewController.swift */,
+				BBC7E7291B1820CF006BA7C5 /* HomeViewController.swift */,
 				BBC7E70E1B181A15006BA7C5 /* Images.xcassets */,
 				BBC7E7101B181A15006BA7C5 /* LaunchScreen.xib */,
 				BBC7E7051B181A15006BA7C5 /* Supporting Files */,
@@ -212,8 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC7E7321B183794006BA7C5 /* TrendingViewController.swift in Sources */,
+				BBC7E72E1B1834C9006BA7C5 /* ComposeViewController.swift in Sources */,
 				BBC7E70A1B181A15006BA7C5 /* ViewController.swift in Sources */,
+				BBC7E7301B18378A006BA7C5 /* AccountViewController.swift in Sources */,
 				BBC7E7081B181A15006BA7C5 /* AppDelegate.swift in Sources */,
+				BBC7E72C1B18346E006BA7C5 /* SearchViewController.swift in Sources */,
+				BBC7E72A1B1820CF006BA7C5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
