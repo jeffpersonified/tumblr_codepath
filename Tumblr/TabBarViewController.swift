@@ -8,8 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
-
+class TabBarViewController: UIViewController, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var tabBar: UIView!
@@ -23,6 +22,7 @@ class TabBarViewController: UIViewController {
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
     var selectedController: UIViewController!
+    var isPresenting: Bool = true
 
     let tabBackgroundColor = UIColor(red: 0.19, green: 0.26, blue: 0.34, alpha: 1)
     let contentBackgroundColor = UIColor(red: 0.19, green: 0.27, blue: 0.36, alpha: 1)
@@ -45,6 +45,14 @@ class TabBarViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "composeSegue" {
+            var destinationViewController = segue.destinationViewController as! UIViewController
+            destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+            destinationViewController.transitioningDelegate = self
+        }
     }
 
     @IBAction func didPressHomeButton(sender: AnyObject) {
@@ -95,6 +103,44 @@ class TabBarViewController: UIViewController {
             button.selected = false
         }
         selectedButton.selected = true
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        isPresenting = true
+        return self
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        isPresenting = false
+        return self
+    }       
+
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+        return 0.35
+    }
+    
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        println("animating transition")
+        var containerView = transitionContext.containerView()
+        var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        
+        if (isPresenting) {
+            containerView.addSubview(toViewController.view)
+            toViewController.view.frame.origin.y = 568
+            UIView.animateWithDuration(0.35, animations: { () -> Void in
+                toViewController.view.frame.origin.y = 0
+            }, completion: { (Bool) -> Void in
+                transitionContext.completeTransition(true)
+            })
+        } else {
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                fromViewController.view.frame.origin.y = 568
+            }) { (finished: Bool) -> Void in
+                transitionContext.completeTransition(true)
+                fromViewController.view.removeFromSuperview()
+            }
+        }
     }
 }
 

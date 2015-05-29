@@ -32,6 +32,9 @@
                                         <state key="normal" image="compose_button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="rLB-0I-dBr" kind="modal" identifier="composeSegue" id="Cu8-TQ-ngW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="HVQ-fv-x6o">
                                         <rect key="frame" x="210" y="5" width="35" height="35"/>
@@ -139,7 +142,7 @@
         <scene sceneID="ntN-M7-qEH">
             <objects>
                 <viewController id="rLB-0I-dBr" customClass="ComposeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bcc-zA-c1U">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="bcc-zA-c1U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -147,6 +150,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kdW-iU-iAg">
+                                        <rect key="frame" x="0.0" y="515" width="320" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="nevermind">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressDismissButton:" destination="rLB-0I-dBr" eventType="touchUpInside" id="AWu-8y-pMW"/>
+                                        </connections>
+                                    </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="video_icon" id="ych-Db-erz">
                                         <rect key="frame" x="29" y="154" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -171,21 +184,20 @@
                                         <rect key="frame" x="123" y="280" width="75" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kdW-iU-iAg">
-                                        <rect key="frame" x="0.0" y="515" width="320" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="nevermind">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="background" destination="6t3-fS-Ntd" id="GtI-YV-Cba"/>
+                        <outlet property="chatIcon" destination="cvc-Zl-Ntd" id="Sxp-yn-tSg"/>
+                        <outlet property="dismissButton" destination="kdW-iU-iAg" id="0aU-OT-mK4"/>
+                        <outlet property="linkIcon" destination="7V6-EV-VbN" id="Lgl-6C-Zco"/>
+                        <outlet property="photoIcon" destination="mgH-Pb-ZJq" id="rbG-Zw-Tbc"/>
+                        <outlet property="quoteIcon" destination="PaH-ya-dKb" id="omM-js-lPg"/>
+                        <outlet property="textIcon" destination="Qdq-gh-Mfk" id="qMC-Bs-b78"/>
+                        <outlet property="videoIcon" destination="ych-Db-erz" id="SFd-ko-Osc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dF-Nw-WiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
