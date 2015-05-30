@@ -120,7 +120,6 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        println("animating transition")
         var containerView = transitionContext.containerView()
         var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
         var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
@@ -134,7 +133,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
                 transitionContext.completeTransition(true)
             })
         } else {
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
+            UIView.animateWithDuration(0.15, animations: { () -> Void in
                 fromViewController.view.frame.origin.y = 568
             }) { (finished: Bool) -> Void in
                 transitionContext.completeTransition(true)

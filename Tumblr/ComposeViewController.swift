@@ -48,11 +48,18 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func didPressDismissButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            self.animateOutComposeActions()
+        }) { (Bool) -> Void in
+            self.delay(0.6, closure: { () -> () in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
+        }
+
     }
     
     func animateInDismissButton() {
-        UIView.animateWithDuration(0.65, animations: { () -> Void in
+        UIView.animateWithDuration(0.55, animations: { () -> Void in
             self.dismissButton.frame.origin.y = self.background.frame.height - self.dismissButton.frame.height
             }, completion: nil)
     }
@@ -82,13 +89,13 @@ class ComposeViewController: UIViewController {
     }
     
     func animateOutComposeActions() {
+        animateOutAction(videoIcon, destination: CGPoint(x: 66.5, y: 201.5), delayTime: 0.5)
         animateOutAction(videoIcon, destination: CGPoint(x: 66.5, y: 201.5), delayTime: 0.15)
-        animateOutAction(videoIcon, destination: CGPoint(x: 66.5, y: 201.5), delayTime: 0.25)
-        animateOutAction(textIcon, destination: CGPoint(x: 65.5, y: 327.5), delayTime: 0.35)
-        animateOutAction(quoteIcon, destination: CGPoint(x: 255.5, y: 200.0), delayTime: 0.1)
-        animateOutAction(photoIcon, destination: CGPoint(x: 160.5, y: 200.5), delayTime: 0.2)
-        animateOutAction(linkIcon, destination: CGPoint(x: 255.5, y: 326.5), delayTime: 0.3)
-        animateOutAction(chatIcon, destination: CGPoint(x: 160.5, y: 328.0), delayTime: 0.4)
+        animateOutAction(textIcon, destination: CGPoint(x: 65.5, y: 327.5), delayTime: 0.25)
+        animateOutAction(quoteIcon, destination: CGPoint(x: 255.5, y: 200.0), delayTime: 0.05)
+        animateOutAction(photoIcon, destination: CGPoint(x: 160.5, y: 200.5), delayTime: 0.1)
+        animateOutAction(linkIcon, destination: CGPoint(x: 255.5, y: 326.5), delayTime: 0.2)
+        animateOutAction(chatIcon, destination: CGPoint(x: 160.5, y: 328.0), delayTime: 0.3)
     }
     
     func animateOutAction(icon: UIImageView, destination: CGPoint, delayTime: Double) {
@@ -100,8 +107,10 @@ class ComposeViewController: UIViewController {
             let easing = UIViewAnimationOptions.CurveEaseInOut
             
             UIView.animateWithDuration(duration, delay: delay, usingSpringWithDamping: damping, initialSpringVelocity: springVelocity, options: easing, animations: { () -> Void in
-                icon.frame.origin.y = 0
-            }, completion: nil)
+                icon.frame.origin.y = -150
+            }, completion: { (Bool) -> Void in
+                icon.hidden = true
+            })
         }
     }
     
