@@ -16,6 +16,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     @IBOutlet weak var accountButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var trendingButton: UIButton!
+    @IBOutlet weak var floatingImageView: UIImageView!
     
     var homeViewController: UIViewController!
     var searchViewController: UIViewController!
@@ -68,6 +69,8 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     @IBAction func didPressAccountButton(sender: AnyObject) {
+        floatingImageView.hidden = true
+        
         selectedController = accountViewController
         addControllerViewToContentView(accountViewController)
         setButtonToActive(accountButton, unselectedButtons: [homeButton, trendingButton, searchButton])

@@ -72,6 +72,12 @@
                             <view contentMode="scaleToFill" id="xYM-Vj-n9j">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="ynr-wh-cwy">
+                                        <rect key="frame" x="-2" y="456" width="185" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -80,6 +86,7 @@
                     <connections>
                         <outlet property="accountButton" destination="HVQ-fv-x6o" id="iPe-3u-KEc"/>
                         <outlet property="contentView" destination="xYM-Vj-n9j" id="XYq-Ca-9d1"/>
+                        <outlet property="floatingImageView" destination="ynr-wh-cwy" id="ZUx-n1-9Pq"/>
                         <outlet property="homeButton" destination="eyi-pH-idt" id="wcB-WL-e2B"/>
                         <outlet property="searchButton" destination="o71-C0-ai3" id="rsL-qa-Lw5"/>
                         <outlet property="tabBar" destination="d6L-42-zEN" id="43w-vb-nqu"/>
@@ -279,6 +286,7 @@
         <image name="account_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>
