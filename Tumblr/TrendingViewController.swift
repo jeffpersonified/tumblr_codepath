@@ -13,10 +13,13 @@ class TrendingViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feed: UIImageView!
     
+    let contentBackgroundColor = UIColor(red: 0.19, green: 0.27, blue: 0.36, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.contentSize = CGSize(width: feed.frame.width, height: feed.frame.height)
+        self.view.backgroundColor = contentBackgroundColor
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,7 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         UIApplication.sharedApplication().statusBarStyle = .LightContent
+        self.window?.backgroundColor = UIColor(red:0.19, green:0.26, blue:0.34, alpha:1)
+//        UIApplication.sharedApplication().setStatusBarStyle(, animated: true)
+        
+//        application.setStatusBarStyle(UIStatusBarStyle, animated: true)
         return true
+        
+//        statusBarStyle: UIStatusBarStyleBlackTranslucent
     }
 
     func applicationWillResignActive(application: UIApplication) {
