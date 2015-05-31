@@ -4,6 +4,7 @@ Tumblr Clone for Codepath
 
 Time spent: 10 hrs
 Completed:
+
     [x] Tapping on Home, Search, Account, or Trending should show the respective screen and highlight the tab bar button.
     [x] Compose button should modally present the compose screen.
     [x] Optional: Compose screen is faded in while the buttons animate in.
