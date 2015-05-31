@@ -1,11 +1,17 @@
-Mailbox Clone for Codepath
+Tumblr Clone for Codepath
 =============
 
 ```
 Time spent: 10 hrs
-Completed: All required
+Completed:
+  [x] Tapping on Home, Search, Account, or Trending should show the respective screen and highlight the tab bar button.
+  [x] Compose button should modally present the compose screen.
+  [x] Optional: Compose screen is faded in while the buttons animate in.
+  [] Optional: Login button should show animate the login form over the view controller.
+  [x] Optional: Discover bubble should bob up and down unless the SearchViewController is tapped.
+
 ```
 
-iOS clone of the Mailbox app for Codepath
+iOS clone of the Tumblr app for Codepath
 
-![Mailbox gif](/walkthrough.gif?raw=true "Mailbox Gif")
+![Tumblr gif](/gif.gif?raw=true "Tumblr Gif")
