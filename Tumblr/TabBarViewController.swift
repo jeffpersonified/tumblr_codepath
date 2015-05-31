@@ -42,6 +42,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("trendingViewController") as! UIViewController
         
         setButtonSelectedImages()
+        makeFloat(floatingImageView)
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,14 +64,13 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     @IBAction func didPressSearchButton(sender: AnyObject) {
+        floatingImageView.hidden = true
         selectedController = searchViewController
         addControllerViewToContentView(searchViewController)
         setButtonToActive(searchButton, unselectedButtons: [homeButton, trendingButton, accountButton])
     }
     
     @IBAction func didPressAccountButton(sender: AnyObject) {
-        floatingImageView.hidden = true
-        
         selectedController = accountViewController
         addControllerViewToContentView(accountViewController)
         setButtonToActive(accountButton, unselectedButtons: [homeButton, trendingButton, searchButton])
@@ -89,11 +89,17 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         controller.didMoveToParentViewController(self)
     }
     
+    func makeFloat(image: UIImageView) {
+        UIView.animateWithDuration(0.75, delay: 0.0, options: UIViewAnimationOptions.Repeat | UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            image.center.y -= 5
+        }, completion: nil)
+    }
+    
     func setButtonSelectedImages() {
-        let homeSelectedIcon = UIImage(named: "home_selected_icon") as UIImage?
-        let searchSelectedIcon = UIImage(named: "search_selected_icon") as UIImage?
-        let accountSelectedIcon = UIImage(named: "account_selected_icon") as UIImage?
-        let trendingSelectedIcon = UIImage(named: "trending_selected_icon") as UIImage?
+        let homeSelectedIcon = UIImage(named: "home_selected_icon")
+        let searchSelectedIcon = UIImage(named: "search_selected_icon")
+        let accountSelectedIcon = UIImage(named: "account_selected_icon")
+        let trendingSelectedIcon = UIImage(named: "trending_selected_icon")
         
         homeButton.setImage(homeSelectedIcon, forState: UIControlState.Selected)
         searchButton.setImage(searchSelectedIcon, forState: UIControlState.Selected)
